@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'JellyBelly';
+    src: url('../fonts/JellyBelly.eot');
+    src: url('../fonts/JellyBelly.woff2') format('woff2'),
+         url('../fonts/JellyBelly.woff') format('woff'),         
+         url('../fonts/JellyBelly.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.team-container{background: url(../images/team.bg.jpg) no-repeat; background-size: cover; height: 100vh; background-position: center;padding: 50px 0;}
+.team-heading{font-family: 'JellyBelly';font-size: 80px; text-transform: uppercase; text-align: center;line-height: 60px; margin-bottom: 40px;}
+.c-red{color: #fc3681;}
+.c-yellow{color: #fede29;}
+.c-blue{color: #43bdec;}
+.c-green{color: #3ab86f;}
+.team-bl img{width: 100%;}
+.team-bl p{font-size: 13px; font-weight: 400;}
+.team-bl h2{font-size: 22px; font-weight: 300;}
+.team-bl .team-info{background: #ffffff; font-family: 'Poppins', sans-serif; padding: 30px 20px;text-align: center;height: 100%;justify-content: space-between; display: flex;flex-direction: column;}
+.team-bl {display: flex;flex-direction: column; height: 100%;}
+.bg-purple{background: #72008b;}
+.bg-green{background: #8adf00;}
+.bg-light-red{background: #f00484;}
+.bg-light-blue{background: #058894;}
+.bg-rred{
+    background-color: #fc1717;
+}
+/* .btn.bg-purple:hover{background:transparent; border-color: #72008b; color: #72008b;}
+.btn.bg-green:hover{background:transparent; border-color: #8adf00; color: #8adf00;}
+.btn.bg-light-red:hover{background:transparent; border-color: #f00484; color: #f00484;}
+.btn.bg-light-blue:hover{background:transparent; border-color: #058894; color: #058894;} */
+.btn{display: inline-block; color: #fff;text-transform: uppercase; font-size: 14px; width: 100%; border-radius: 0;}
+.btn:hover{color: #fff;}
+.btn:hover i{transform: translateX(5px);}
+.btn-check:focus+.btn, .btn:focus{box-shadow: none;}
+.team-bl .btn{display: flex;justify-content: center;align-items: center;}
+.icon{max-width: 15px; margin-left: 8px;  transition: all ease 0.5s; -webkit-transition: all ease 0.5s; -moz-transition: all ease 0.5s;}
+
+@media (max-width: 1200px) {
+    .team-heading {    
+        font-size: 60px;
+        line-height: 60px;        
+    }
+    .team-container .col-md-6{
+        margin-bottom: 30px;
+    }
+    .team-bl h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .team-container{height: auto;}
+}
+
+@media (max-width: 767px) {
+    .team-heading {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+}
