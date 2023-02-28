@@ -22,9 +22,14 @@ const PricingIndexV2 = () => {
                 }
         }).then(resp => {
             console.log(resp.data)
-            if(resp.data.status === 'Success')
+            console.log(resp.data.status)
+            if(resp.data.status === 'Success'){
+                console.log("In Status")
+                console.log(resp.data.status)
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')
                 .then(() => setVerified(true));
+
+            }
             else if(resp.data.status === 'EmailAlreadyConfirmed')
                 Swal.fire('Email Verified', 'Your email has already been verified. Please choose a subscription plan.', 'info')
                 .then(() => setVerified(true));
