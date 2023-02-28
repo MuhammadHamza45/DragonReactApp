@@ -20,7 +20,10 @@ const PricingPlan = (props) => {
     }
     const _onApprove = (data, action) => {
         Swal.fire('Thank You!', 'You have successfully been subscribed to your selected plan.', 'success');
-        axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
+        // axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
+        // .then(console.log)
+        // .catch(alert)
+        axios.post('https://main.d1gccxbqrxclxx.amplifyapp.com/api/Subscription/saveUserSubscription', { ...data, userId: id })
         .then(console.log)
         .catch(alert)
     } 

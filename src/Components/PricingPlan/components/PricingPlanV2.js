@@ -11,10 +11,15 @@ const PricingIndexV2 = () => {
     const [Id] = useState(query.get('Id'));
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
-        axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
-            params: {
-                Id, Token
-            }
+        
+        // axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
+        //     params: {
+        //         Id, Token
+        //     }
+            axios.get('https://main.d1gccxbqrxclxx.amplifyapp.com/Identity/Account/Manage/VerifyEmail', {
+                params: {
+                    Id, Token
+                }
         }).then(resp => {
             if(resp.data.status === 'Success')
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')
