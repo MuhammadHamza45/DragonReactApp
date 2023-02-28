@@ -11,12 +11,6 @@ const PricingIndexV2 = () => {
     const [Id] = useState(query.get('Id'));
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
-<<<<<<< HEAD
-        axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
-            params: {
-                Id, Token
-            }
-=======
         
         // axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
         //     params: {
@@ -26,7 +20,6 @@ const PricingIndexV2 = () => {
                 params: {
                     Id, Token
                 }
->>>>>>> 4238a7dd2e930e11e46d65327d1c41ea77bc22dd
         }).then(resp => {
             if(resp.data.status === 'Success')
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')
