@@ -11,7 +11,11 @@ import Banner2 from "./Components/Banner2";
 import Teamlist from "./pages/Team";
 import NewTopHome from "./pages/NewTopHome";
 import NewBannerHome from "./pages/NewBannerHome";
+<<<<<<< HEAD
 // import Payment from "./Components/PricingPlan/components/Payment";
+=======
+import Payment from "./Components/PricingPlan/components/Payment";
+>>>>>>> 4238a7dd2e930e11e46d65327d1c41ea77bc22dd
 
 
 function App() {
