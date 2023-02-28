@@ -1,0 +1,166 @@
+.Inspiration-banner{
+    position: relative;
+}
+.Inspiration-banner::after{
+    position: absolute;
+    content: '';
+    background-image: url(images/banner3/title-img.png);
+    top: 29%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: 881px;
+    height: 139px;
+    margin: auto;
+}
+.Inspiration-banner img {
+    max-width: 100%;
+}
+.Inspiration-banner .Inspiration-inner-content::-webkit-scrollbar {
+    width: 2px;
+    height: 0px; 
+    display: block;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-appearance: none;
+}
+.Inspiration-banner .Inspiration-inner-content::-webkit-scrollbar-track {
+	background-color: #000;
+    display: block;
+}
+
+.Inspiration-banner .Inspiration-inner-content {
+    position: absolute;
+    top: auto;
+    bottom: 14%;
+    left: 3%;
+    right: 0;
+    width: 45%;
+    margin: auto;
+    font-size: 26px;
+    line-height: 35px;
+    color: #ffffff;
+    /* font-family: 'Pirate Kids'; */
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    /* -webkit-line-clamp: 8; */
+    /* -webkit-box-orient: vertical; */
+    /* display: -webkit-box; */
+    /* overflow: hidden; */
+}
+
+@media (max-width: 1750px) {
+    .Inspiration-banner::after {
+        width: 810px;
+        height: 128px;
+        background-size: contain;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        font-size: 20px;
+        bottom: 14%;
+    }
+}
+@media (max-width: 1650px) {
+    .Inspiration-banner::after {
+        width: 680px;
+        height: 107px;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        max-height: 260px;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 1550px) {
+    .Inspiration-banner::after {
+        top: 32%;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        max-height: 220px;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 1350px) {
+    .Inspiration-banner::after {
+        width: 490px;
+        height: 79px;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        max-height: 220px;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 1250px) {
+    .Inspiration-banner::after {
+        width: 420px;
+        height: 67px;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        font-size: 17px;
+        max-height: 220px;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 1150px) {
+    .Inspiration-banner .Inspiration-inner-content {
+        line-height: 30px;
+        max-height: 170px;
+        overflow-y: auto;
+    }
+}
+@media (max-width:991px){
+    .Inspiration-banner::after {
+        width: 270px;
+        height: 44px;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        max-height: 170px;
+        overflow-y: auto;
+    }
+}
+@media (max-width:850px){
+    .Inspiration-banner .Inspiration-inner-content {
+        font-size: 16px;
+        line-height: 26px;
+        max-height: 140px;
+        overflow-y: auto;
+    }
+}
+.scroll-text {
+    display: none;
+}
+@media (max-width:767px){
+    .scroll-text{
+        display: block;
+    }
+    .Inspiration-banner .Inspiration-inner-content {
+        font-size: 13px;
+        line-height: 22px;
+        max-height: 105px;
+        overflow-y: auto;
+    }
+    .Inspiration-banner::after {
+        top: 22%;
+    }
+}
+@media (max-width:525px){
+    .Inspiration-banner::after {
+        width: 240px;
+        height: 38px;
+        top: 18%;
+    }
+}
+@media (max-width:460px){
+    .Inspiration-banner::after {
+        width: 170px;
+        height: 28px;
+        top: 12%;
+    }      
+    .Inspiration-banner .Inspiration-inner-content {
+        font-size: 13px;
+        line-height: 18px;
+        /* -webkit-line-clamp:4; */
+        max-height: 85px;
+        overflow-y: auto;
+    }
+}

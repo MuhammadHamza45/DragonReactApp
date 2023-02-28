@@ -1,0 +1,453 @@
+.DragonCamp{
+    background-color: #8fc1ff;
+    padding: 0 60px;
+}
+.DragonCamp-content{
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+}
+.DragonCamp-content::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 238px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    z-index:-2;
+    background-image: url(images/banner1/DragonCamp.png);
+}
+.DragonCamp-img {
+    background-image: url(images/banner1/main-text.png);
+    width: 336px;
+    height: 210px;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.DragonCamp img {
+    max-width: 100%;
+    height: auto;
+}
+.DragonCamp-inner {
+    padding-bottom: 40px;
+    justify-content: space-between;
+}
+.DragonCamp .DragonCamp-logo {
+    padding-top: 40px;
+    width: 20%;
+}
+.DragonCamp .Dragon-main-title {
+    text-align: center;
+    background-image: linear-gradient(0deg, #f97f0b 0%, #ffff26 100%);
+    border-radius: 0 0 26px 26px;
+    padding: 0 80px;
+    width: 58%;
+    height: fit-content;
+}
+.DragonCamp .Dragon-title {
+    font-size: 34px;
+    line-height: 48px;
+    color: #015ccd;
+    border-radius: 0 0 26px 26px;
+    background-image: linear-gradient(0deg, #ffca00 0%, #ffff00 100%);
+    padding: 30px 0;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: italic;
+}
+.DragonCamp .Dragon-title span {
+    color: #ff0000;
+}
+.DragonCamp .Dragon-sub-title{
+    font-size: 38px;
+    letter-spacing: 0px;
+    line-height: 58px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: Montserrat;
+    padding: 20px 0;
+}
+.DragonCamp .DragonCamp-content-inner {
+    display: flex;
+    justify-content: end;
+}
+.DragonCamp .DragonCamp-icon {
+    width: 40%;
+    text-align: right;
+}
+.DragonCamp .DragonCamp-desc {
+    font-size: 44px;
+    line-height: 38px;
+    color: #3b4e67;
+    font-weight: bold;
+    font-family: "Myriad Pro";
+    text-align: center;
+    padding: 30px 0;
+    width: 22%;
+}
+.DragonCamp-inner-block{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+}
+.DragonCamp-inner-block::after{
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 32px;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 82%;
+    background-image: url(images/banner1/image-bg.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: contain;
+}
+.DragonCamp .DragonCamp-inner-img.img1 {
+    text-align: right;
+}
+.DragonCamp .DragonCamp-inner-text {
+    font-size: 31px;
+    line-height: 38px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Montserrat";
+    text-align: center;
+    border-radius: 26px;
+    background-color: #e400ff;
+    height: fit-content;
+    padding: 25px 15px;
+    text-transform: uppercase;
+}
+/* .DragonCamp .DragonCamp-inner-text div{
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+} */
+.DragonCamp-block {
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.DragonCamp .DragonCamp-block-title  {
+    font-size: 36px;
+    line-height: 40px;
+    color: #ffffff;
+    font-family: "KG Blank Space Solid";
+    text-align: center;
+    width: 30%;
+    border-radius: 26px;
+    padding: 11px 0;
+    background-color: #fc1717;
+    display: inline-block;
+    margin-left: 60px;
+}
+.DragonCamp-block-title.title2 {
+    float: right;
+}
+
+@media (max-width: 1820px) {
+    .DragonCamp .Dragon-main-title {
+        padding: 0 60px;
+    }
+    .DragonCamp {
+        padding: 0 50px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 38px;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 32px;
+        line-height: 40px;
+        padding: 20px 0;
+    }
+    .DragonCamp .Dragon-sub-title {
+        font-size: 34px;
+        line-height: 50px;
+        padding: 15px 0;
+    }
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+@media (max-width: 1580px) {
+    .DragonCamp .DragonCamp-logo {
+        padding-top: 25px;
+    }
+    .DragonCamp .Dragon-sub-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 15px 0;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 34px;
+        padding: 20px 0;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .DragonCamp-content::after {
+        height: 198px;
+    }
+    .DragonCamp-content-title img {
+        width: 336px;
+    }
+    .DragonCamp .DragonCamp-icon img {
+        width: 200px;
+    }
+    .DragonCamp-img {
+        width: 256px;
+        height: 170px;
+   }
+}
+@media (max-width: 1400px) {
+    .DragonCamp .Dragon-main-title {
+        padding: 0 40px;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 29px;
+        line-height: 36px;
+    }
+}
+@media (max-width: 1280px) {
+    .DragonCamp .Dragon-main-title {
+        padding: 0 30px;
+    }
+    .DragonCamp .DragonCamp-logo{
+        width: 18%;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 26px;
+        line-height: 30px;
+        padding: 12px 0;
+    }
+    .DragonCamp .Dragon-sub-title {
+        padding: 10px 0;
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .DragonCamp-inner {
+        padding-bottom: 30px;
+    }
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 18px 12px;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 25px;
+        line-height: 34px;
+        margin-left: 30px;
+    }
+    .DragonCamp-inner-block {
+        padding-bottom: 60px;
+    }
+    .DragonCamp-img {
+        width: 240px;
+        height: 160px;
+        background-size: cover;
+    }
+    .DragonCamp-content::after {
+        height: 158px;
+    }
+}
+@media (max-width: 1160px) {
+    .DragonCamp {
+        padding: 0 15px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 23px;
+        line-height: 26px;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .DragonCamp .Dragon-main-title {
+        padding: 0 20px;
+    }
+    .DragonCamp .Dragon-sub-title {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .DragonCamp-inner-block {
+        padding-bottom: 40px;
+    }
+    .DragonCamp-content-title img {
+        width: 276px;
+    }
+    .DragonCamp .DragonCamp-icon img {
+        width: 170px;
+    }
+    .DragonCamp-inner {
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 960px) {
+    .DragonCamp .Dragon-title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .DragonCamp .Dragon-main-title {
+        padding: 0 12px;
+    }
+    .DragonCamp .Dragon-sub-title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .DragonCamp .DragonCamp-icon img {
+        width: 150px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .DragonCamp-content-title img {
+        width: 236px;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 23px;
+        line-height: 30px;
+        margin-left: 0px;
+        width: 40%;
+    }
+    .DragonCamp-inner-block {
+        padding-bottom: 30px;
+    }
+    .DragonCamp .DragonCamp-desc {
+        padding: 20px 0 0;
+    }
+    .DragonCamp-content::after {
+        height: 108px;
+        background-size: cover;
+    }
+    .DragonCamp-img {
+        height: 140px;
+    }
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 17px;
+        line-height: 23px;
+    }
+}
+@media (max-width: 767px) {
+    .DragonCamp-inner {
+        justify-content: center;
+    }
+    .DragonCamp .Dragon-main-title {
+        width: 80%;
+    }
+    .DragonCamp-block {
+        padding-bottom: 100px;
+    }
+    .DragonCamp .DragonCamp-logo,.DragonCamp .DragonCamp-desc{
+        order: 2;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 15px;
+        line-height: 26px;
+        width: 48%;
+    }
+    .DragonCamp .DragonCamp-block-title.title2{
+        display: none;
+    }
+
+    .DragonCamp .DragonCamp-logo{
+        width: 28%;
+    }
+    .DragonCamp-img {
+        position: relative;
+        background-size: contain;
+        text-align: center;
+        display: inline-block;
+        width: 150px;
+        height: 100px;
+    }
+    .DragonCamp {
+        text-align: center;
+    }
+    .DragonCamp .DragonCamp-desc {
+        width: 40%;
+        padding: 32px 20px 0;
+    }
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 575px) {
+    .DragonCamp .DragonCamp-inner-text {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 20px 0;
+    }
+    .DragonCamp .Dragon-main-title {
+        width: 100%;
+    }
+    .DragonCamp .DragonCamp-desc {
+        width: 55%;
+        padding: 22px 15px 0;
+    }
+    .DragonCamp .DragonCamp-logo {
+        width: 33%;
+    }
+}
+@media (max-width: 425px) {
+    .DragonCamp .Dragon-sub-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .DragonCamp .Dragon-title {
+        font-size: 15px;
+    }
+    .DragonCamp-block {
+        display: flow-root;
+        text-align: center;
+    }
+    .DragonCamp .DragonCamp-logo {
+        width: 40%;
+    }
+    .DragonCamp-block-title.title2 {
+        margin-top: 10px;
+    }
+    .DragonCamp-img {
+        width: 150px;
+        margin: auto;
+    }
+    .DragonCamp .DragonCamp-block-title {
+        font-size: 18px;
+        width: 100%;
+    }
+}
