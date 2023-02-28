@@ -34,7 +34,6 @@ With Grant The Dragon" planFee="349" theme="green" />
                             </div>
                             <div className='pricingplan__btn'>
                                 <button type='button' disabled></button>
-                                <br />
                             </div>
                         </div>
                     </Col>
