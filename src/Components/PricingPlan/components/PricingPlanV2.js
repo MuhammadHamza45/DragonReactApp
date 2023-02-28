@@ -12,6 +12,7 @@ const PricingIndexV2 = () => {
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
         console.log("Start")
+        console.log(Id, Token)
         // axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
         //     params: {
         //         Id, Token
