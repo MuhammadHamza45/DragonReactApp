@@ -11,19 +11,11 @@ const PricingIndexV2 = () => {
     const [Id] = useState(query.get('Id'));
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
-        console.log("Start")
-        console.log(Id, Token)
-        // axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
-        //     params: {
-        //         Id, Token
-        //     }
         axios.get('https://main.d1gccxbqrxclxx.amplifyapp.com/Identity/Account/Manage/VerifyEmail', {
             params: {
                 Id, Token
             }
         }).then(resp => {
-            console.log(resp.data)
-            console.log(resp.data.status)
             if(resp.data.status === 'Success'){
                 console.log("In Status")
                 console.log(resp.data.status)
