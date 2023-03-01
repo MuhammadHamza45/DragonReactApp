@@ -11,14 +11,12 @@ const PricingIndexV2 = () => {
     const [Id] = useState(query.get('Id'));
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
-        axios.get('http://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com/Identity/Account/Manage/VerifyEmail', {
+        axios.get('https://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com:8443/Identity/Account/Manage/VerifyEmail', {
             params: {
                 Id, Token
             }
         }).then(resp => {
             if(resp.data.status === 'Success'){
-                console.log("In Status")
-                console.log(resp.data.status)
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')
                 .then(() => setVerified(true));
 

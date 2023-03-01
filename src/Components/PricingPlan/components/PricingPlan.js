@@ -26,7 +26,7 @@ const PricingPlan = (props) => {
         // axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
         // .then(console.log)
         // .catch(alert)
-        axios.post('http://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com/api/Subscription/saveUserSubscription', { ...data, userId: id })
+        axios.post('https://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com:8443/api/Subscription/saveUserSubscription', { ...data, userId: id })
         .then(console.log)
         .catch(alert)
     } 
