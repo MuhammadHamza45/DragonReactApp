@@ -17,10 +17,10 @@ const PricingIndexV2 = () => {
         //     params: {
         //         Id, Token
         //     }
-            axios.get('https://main.d1gccxbqrxclxx.amplifyapp.com/Identity/Account/Manage/VerifyEmail', {
-                params: {
-                    Id, Token
-                }
+        axios.get('https://main.d1gccxbqrxclxx.amplifyapp.com/Identity/Account/Manage/VerifyEmail', {
+            params: {
+                Id, Token
+            }
         }).then(resp => {
             console.log(resp.data)
             console.log(resp.data.status)
