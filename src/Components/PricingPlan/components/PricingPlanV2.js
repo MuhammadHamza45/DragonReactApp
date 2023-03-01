@@ -11,7 +11,7 @@ const PricingIndexV2 = () => {
     const [Id] = useState(query.get('Id'));
     const [Token] = useState(query.get('Token'));
     useEffect(() => {
-        axios.get('https://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com:8443/Identity/Account/Manage/VerifyEmail', {
+        axios.get('https://dragondevapisnew-env.eba-3tippveu.us-west-1.elasticbeanstalk.com/Identity/Account/Manage/VerifyEmail', {
             params: {
                 Id, Token
             }
