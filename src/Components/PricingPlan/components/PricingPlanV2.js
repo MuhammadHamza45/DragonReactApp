@@ -15,6 +15,10 @@ const PricingIndexV2 = () => {
             params: {
                 Id, Token
             }
+        // axios.get('https://localhost:7067/Identity/Account/Manage/VerifyEmail', {
+        //     params: {
+        //         Id, Token
+        // }
         }).then(resp => {
             if(resp.data.status === 'Success'){
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')

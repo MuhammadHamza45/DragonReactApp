@@ -20,9 +20,7 @@ const PricingPlan = (props) => {
     }
     const _onApprove = (data, action) => {
         Swal.fire('Thank You!', 'You have successfully been subscribed to your selected plan.', 'success');
-
-        //axios.post('http://dragoncamplatestapi-env-dev.eba-utemrjim.us-west-1.elasticbeanstalk.com//api/Subscription/saveUserSubscription', { ...data, userId: id })
-
+        
         // axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
         // .then(console.log)
         // .catch(alert)
@@ -55,7 +53,7 @@ const PricingPlan = (props) => {
                         onApprove={_onApprove}
                         onError={_onError}
                         onCancel={_onCancel}
-                    /> : <Button >Subscribe</Button>}
+                    /> : <Button onClick={() => _onApprove({subscriptionId: 'FREE'})}>Subscribe</Button>}
             </div>
         </div>
     )
