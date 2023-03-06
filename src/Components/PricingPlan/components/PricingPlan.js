@@ -24,7 +24,7 @@ const PricingPlan = (props) => {
         // axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
         // .then(console.log)
         // .catch(alert)
-        axios.post('https://dragondevapisnew-env.eba-3tippveu.us-west-1.elasticbeanstalk.com//api/Subscription/saveUserSubscription', { ...data, userId: id })
+        axios.post('https://dragondevapisnew-env.eba-3tippveu.us-west-1.elasticbeanstalk.com/api/Subscription/saveUserSubscription', { ...data, userId: id })
         .then(console.log)
         .catch(alert)
     } 
