@@ -1,39 +1,38 @@
 import PropTypes from 'prop-types';
 import { Button, Image } from 'react-bootstrap'
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { loadStripe } from '@stripe/stripe-js';
 import AudioImage from '../../../assets/img/audio.png'
 import '../_pricingplan.scss'
 import '../pricingplan.css'
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { API_ENDPOINT } from '../../../default';
 
 
 
 const PricingPlan = (props) => {
     
-    const { detail, planFee, theme, planId, id } = props;
+    const { detail, planFee, theme, planId } = props;
+    const queryParams = new URLSearchParams(window.location.search);
    
-    const _createSubscription = (data, actions) => {
-        return actions.subscription.create({
-            plan_id: planId
-        })
-    }
-    const _onApprove = (data, action) => {
-        Swal.fire('Thank You!', 'You have successfully been subscribed to your selected plan.', 'success');
+    const _handleStripe = async () => {
+        const stripe = await loadStripe('pk_test_51Mg3KLH38W4sdy7oIg82x2kxfoTDLZqOADwyotc1BDv1fO9WytCyUEno4mOYF81MO5TQnqUXawIW7jhysRa2s02R00VHiTVtRa');
         
-        // axios.post('https://localhost:7067/api/Subscription/saveUserSubscription', { ...data, userId: id })
-        // .then(console.log)
-        // .catch(alert)
-        axios.post('https://dragondevapisnew-env.eba-3tippveu.us-west-1.elasticbeanstalk.com/api/Subscription/saveUserSubscription', { ...data, userId: id })
-        .then(console.log)
-        .catch(alert)
-    } 
-    const _onError = (actions, data) => {
-        Swal.fire('Subscription Failed!', 'You are not subscribed yet to a subscription plan. Please select a plan and try again.', 'error');
+        axios.get(`${API_ENDPOINT}/api/Subscription/createPaymentSession`, {
+            params: {planId: planId, customerId: queryParams.get('Id')}
+        })
+        .then(async resp => {
+            console.log(resp);
+            if(resp.data.success) {
+                const result = await stripe.redirectToCheckout({sessionId: resp.data.session.id});
+                console.log(result);
+            }
+            else
+                Swal.fire('Error', resp.data.message, 'error').then(() => window.location.href = '/')
+        })
+        .catch(console.error);
     }
-    const _onCancel = (actions, data) => {
-        Swal.fire('Canceled', 'Subscription unexpectedly closed. Please try again to keep enjoying Dragon Camp.', 'error');
-    }
+
     return (
         <div className='pricingplan'>
             <div className='pricingplan__head'>
@@ -46,14 +45,7 @@ const PricingPlan = (props) => {
                 <h3>${planFee}</h3>
             </div>
             <div className='pricingplan__btn'>
-                
-                {/* <PayPalScriptProvider options={{ "client-id": "AcNswpTZpAkULNv6N91IaNLjYkjqhcD6cmK7eEvzltizyzKiYl3GHSxXgNW9uN53-1zadGGh0gUcMOf7", intent: 'subscription', vault: true}}> */}
-                    {planId !== 'FREE' ? <PayPalButtons fundingSource="card" style={{shape: 'pill', color: 'black', layout: 'vertical', label: 'subscribe' }}
-                        createSubscription={_createSubscription}
-                        onApprove={_onApprove}
-                        onError={_onError}
-                        onCancel={_onCancel}
-                    /> : <Button onClick={() => _onApprove({subscriptionId: 'FREE'})}>Subscribe</Button>}
+                <Button onClick={() => _handleStripe()}>Subscribe</Button>
             </div>
         </div>
     )
@@ -62,7 +54,6 @@ PricingPlan.propTypes = {
     detail: PropTypes.arrayOf(PropTypes.string).isRequired,
     planFee: PropTypes.number.isRequired,
     theme: PropTypes.oneOf(['purple', 'green', 'red']),
-    planId: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    planId: PropTypes.string.isRequired
 }
 export default PricingPlan
