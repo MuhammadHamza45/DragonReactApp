@@ -21,3 +21,17 @@
 .pricingplan__btn{
     margin-top: 10px;
 }
+.pricingheader{
+    font-size: 5.5rem;
+    font-style: italic;
+    font-family: 'PiecesofEight';
+    text-align: center;
+    color: #fefefe;
+}
+.pricingdescription{
+    font-size: 2.7rem;
+    font-family: 'PiecesofEight';
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    text-align: center;
+    color: #fefefe;
+}

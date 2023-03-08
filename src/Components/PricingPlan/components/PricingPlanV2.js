@@ -20,7 +20,6 @@ const PricingIndexV2 = () => {
             if(resp.data.status === 'Success'){
                 Swal.fire('Success', 'Your email address has been verified successfully.', 'success')
                 .then(() => setVerified(true));
-
             }
             else if(resp.data.status === 'EmailAlreadyConfirmed')
                 Swal.fire('Email Verified', 'Your email has already been verified. Please choose a subscription plan.', 'info')
@@ -37,6 +36,8 @@ const PricingIndexV2 = () => {
     return (
         <section className='pricingbg'>
             {verified ? <Container>
+                <h1 className='pricingheader'>Subscription</h1>
+                <h3 className='pricingdescription'>Choose the account you want to try free for 30 days</h3>
                 <Row>
                     {/* <Col lg={6} xl={3} md={6}>
                         <PricingPlan planId='FREE' detail={['10 free items added to your app by us for free per month - Click below to get your first 10 FREE!', 'Integrate the audio and images yourself in your DragonCamp app', 'Upload 3 images free/month for every hour played', '1 Child', '1 Adult', 'Trivia Game', 'Access To All DragonCamp Application Features']} planFee={0} theme="purple" id={Id}/>

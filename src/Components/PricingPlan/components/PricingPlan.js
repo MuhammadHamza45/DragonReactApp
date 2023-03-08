@@ -26,6 +26,7 @@ const PricingPlan = (props) => {
             if(resp.data.success) {
                 const result = await stripe.redirectToCheckout({sessionId: resp.data.session.id});
                 console.log(result);
+                Swal.fire('Success', resp.data.message, 'success').then(() => window.location.href = '/')
             }
             else
                 Swal.fire('Error', resp.data.message, 'error').then(() => window.location.href = '/')
