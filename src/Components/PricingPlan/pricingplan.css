@@ -7,13 +7,13 @@
 }
 .pricingplan__body h3{
     position: absolute !important;
-    bottom: 5px!important;
+    bottom: 50px!important;
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 .pricingplan__body{
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 .pricingbg{
     padding: 75px;

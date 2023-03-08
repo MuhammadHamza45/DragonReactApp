@@ -17,7 +17,7 @@ const PricingIndex = () => {
                     </Col>
                     <Col lg={4}>
                         <PricingPlan detail="Your Custom Audio of the “ABC’s” 
-With Grant The Dragon" planFee="349" theme="green" />
+                        With Grant The Dragon" planFee="349" theme="green" />
                     </Col>
                     <Col lg={4}>
                         <div className='pricingplan custompplan'>
