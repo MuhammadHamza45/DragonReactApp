@@ -11,15 +11,15 @@ const PricingIndex = () => {
         <section className='pricingbg'>
             <Container>
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={12} sm={12}>
                         <PricingPlan detail="Your Custom Audio Counting to
                     10 With Grant The Dragon" planFee="199" theme="purple" />
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={12} sm={12}>
                         <PricingPlan detail="Your Custom Audio of the “ABC’s” 
                         With Grant The Dragon" planFee="349" theme="green" />
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={12} sm={12}>
                         <div className='pricingplan custompplan'>
                             <div className='pricingplan__head'>
                                 <h2>CUSTOM

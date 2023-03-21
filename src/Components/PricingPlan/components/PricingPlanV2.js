@@ -42,13 +42,13 @@ const PricingIndexV2 = () => {
                     {/* <Col lg={6} xl={3} md={6}>
                         <PricingPlan planId='FREE' detail={['10 free items added to your app by us for free per month - Click below to get your first 10 FREE!', 'Integrate the audio and images yourself in your DragonCamp app', 'Upload 3 images free/month for every hour played', '1 Child', '1 Adult', 'Trivia Game', 'Access To All DragonCamp Application Features']} planFee={0} theme="purple" id={Id}/>
                     </Col> */}
-                    <Col lg={4} xl={4} md={6}>
+                    <Col lg={4} xl={4} md={12} sm={12}>
                         <PricingPlan planId='price_1MiuVAH38W4sdy7ofd9jj1JE' detail={['All Free Features', '2 Profiles', 'Add your own subjects, 1 free/month and 1 earned every 5 hours played', 'Send 10 audio/images/month and we integrate in your DragonCamp app (Total for all profiles) *Earn 1 new item every hour played']} planFee={5.99} theme="green" id={Id}/>
                     </Col>
-                    <Col lg={4} xl={4} md={6}>
+                    <Col lg={4} xl={4} md={12} sm={12}>
                         <PricingPlan planId='price_1MiuaYH38W4sdy7oaRGrTJZo' detail={['All $5.99 Features', 'Send us 30 audio/images/month and we will integrate them in your DragonCamp App', '3 Profiles', 'Reports for correct/incorrect answers in trivia']} planFee={14.99} theme="purple" id={Id}/>
                     </Col>
-                    <Col lg={4} xl={4} md={6}>
+                    <Col lg={4} xl={4} md={12} sm={12}>
                         <PricingPlan planId='price_1Miub5H38W4sdy7o17IWnQlH' detail={['All $14.99 Features', '4 Profiles', 'Send us 60 total Audio/image items for us to integrate in your DragonCamp', 'Reports for all kids account activity, trivia and item interactions.']} planFee={29.99} theme="green" id={Id}/>
                     </Col>
                 </Row>

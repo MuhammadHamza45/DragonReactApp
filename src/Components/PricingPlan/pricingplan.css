@@ -2,7 +2,7 @@
     text-align: left;
     font-size: 1.1rem;
     color: #FFF;
-    padding: 5px;
+    /* padding: 5px; */
     list-style-type: square;
 }
 .pricingplan__body h3{
@@ -16,7 +16,7 @@
     padding-bottom: 50px;
 }
 .pricingbg{
-    padding: 75px;
+    /* padding: 75px; */
 }
 .pricingplan__btn{
     margin-top: 10px;
@@ -34,4 +34,12 @@
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     text-align: center;
     color: #fefefe;
+}
+@media screen and (max-width: 600px) {
+    .pricingheader{
+        font-size: 3.5rem;
+    }
+    .pricingdescription{
+        font-size: 1.7rem;
+    }
 }
