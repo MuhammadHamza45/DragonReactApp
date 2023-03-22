@@ -11,13 +11,21 @@ import Banner2 from "./Components/Banner2";
 import Teamlist from "./pages/Team";
 import NewTopHome from "./pages/NewTopHome";
 import NewBannerHome from "./pages/NewBannerHome";
+import { useState } from 'react'
 
 // import Payment from "./Components/PricingPlan/components/Payment";
 import Payment from "./Components/PricingPlan/components/Payment";
+import Swal from "sweetalert2";
 
 
 
 function App() {
+  const query = new URL(window.location.href).searchParams;
+  const [Success] = useState(query.get('success'));
+  if(Success && Success == 'true')
+    Swal.fire("Success", "Go Back To Your DragonCamp app to start playing!", "success")
+  else if(Success && Success == 'false')
+    Swal.fire("Subscription Failed", "Please try again later or contact support if the issue persists!", "error") 
   return (
     <>
       <NewBannerHome />
