@@ -16,7 +16,7 @@ const PricingPlan = (props) => {
     const queryParams = new URLSearchParams(window.location.search);
    
     const _handleStripe = async () => {
-        const stripe = await loadStripe('pk_test_51Mg3KLH38W4sdy7oIg82x2kxfoTDLZqOADwyotc1BDv1fO9WytCyUEno4mOYF81MO5TQnqUXawIW7jhysRa2s02R00VHiTVtRa');
+        const stripe = await loadStripe('pk_test_51McOUDKiazAS3onP90JVNGLMcDy1dsjwM1So1QvWEtkwaCAVly1mn8GEZ6SyNTXJL0IttFnRDHOV4AhNRnGBqqSw00nVEavUP8');
         
         axios.get(`${API_ENDPOINT}/api/Subscription/createPaymentSession`, {
             params: {planId: planId, customerId: queryParams.get('Id')}
